@@ -15,8 +15,8 @@ with open("Taxi.pkl", "rb") as f:
 
 @app.route("/")
 def index():
-    if "user_id" not in session:
-        return redirect(url_for("login"))
+    # if "user_id" not in session:
+    #     return redirect(url_for("login"))
     
     return render_template("index.html")
 
