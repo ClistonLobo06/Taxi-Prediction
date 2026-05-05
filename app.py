@@ -13,12 +13,12 @@ with open("Taxi.pkl", "rb") as f:
 # def hash_password(password):
 #     return sha256(password.encode()).hexdigest()    
 
-# @app.route("/")
-# def index():
-#     if "user_id" not in session:
-#         return redirect(url_for("login"))
+@app.route("/")
+def index():
+    if "user_id" not in session:
+        return redirect(url_for("login"))
     
-#     return render_template("index.html")
+    return render_template("index.html")
 
 # --- NEW ROUTE ADDED HERE ---
 @app.route("/about")
